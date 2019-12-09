@@ -13,7 +13,7 @@ File System Implementation
 ## Contiguous
 파일을 디스크에 연속적으로 저장해보자
 
-![allocation](./image/allocation.png)
+![contiguous](./image/contiguous_allocation.png)
 
 아 연속적으로 저장하고 싶은데 다른 파일이 이미 그 공간을 차지하고 있네 그러면 어떻게 하지?? 다른 방법이 없을까?
 
@@ -26,8 +26,9 @@ File System Implementation
 ![indexed](./image/index_allocation.png)
 
 ## Mapping
-
 ![mapping](./image/mapping_allocation.png)
+
+UNIX의 UFS는 이러한 방식을 사용한다.
 
 # 5. Free-Space Management
 
