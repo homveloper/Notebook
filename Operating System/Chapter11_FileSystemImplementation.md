@@ -2,7 +2,11 @@ File System Implementation
 =====
 # 1. File-System Structure
 
+## Virtual File System
+여러개의 파일 시스템이 서로 다를지라도 사용자는 같은 방법으로 접근하는 방법이다. 이를 통해 윈도우,맥,리눅스 간의 파일시스템 차이를 느낄 필요 없이 접근 할 수 있다.
+![vfs](./image/vfs.png =250x250)
 
+예를 들어, 윈도우10에 있는 원드라이브는 네트워크에 있는 기억장치지만 마치 컴퓨터에있는 기억장치인것 처럼 사용할 수 있다.
 
 # 2. File-System Implementation
 
@@ -28,7 +32,8 @@ File System Implementation
 ## Mapping
 ![mapping](./image/mapping_allocation.png)
 
-UNIX의 UFS는 이러한 방식을 사용한다.
+UNIX의 UFS는 이러한 방식을 사용한다. directblocks 빠르지만 single,double,triple indirect는 데이터를 찾기 위해 접근을 여러번 해야하므로 접근 시간이 느리다.
+![ufs](./image/unix_ufs.png)
 
 # 5. Free-Space Management
 
