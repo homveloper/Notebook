@@ -12,7 +12,7 @@ File System Implementation
 
 # 3. Directory Implementation
 
-# 4. Allocation Methods
+# 4. Allocation Methods [시험문제]
 
 ## Contiguous
 파일을 디스크에 연속적으로 저장해보자
