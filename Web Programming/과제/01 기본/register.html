@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <style>
+        div,input {
+            margin : 10px;
+        }
+    </style>
+
+    <h1>회원가입</h1>
+
+    <form action="" method="POST">
+        <fieldset>
+            <legend>로그인정보</legend>
+            <div>
+                <label for="id">아이디</label>
+                <input type="text" id="id" autocomplete="off">
+            </div>
+
+            <div>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" autocomplete="off">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>개인정보</legend>
+
+            <div><label for="name">이름</label><input type="text" id="name" autocomplete="off"></div>
+
+            <div>성별
+                <label for="man">남</label><input type="radio" name="gender" id="man">
+                <label for="woman">여</label><input type="radio" name="gender" id="woman">
+            </div>
+
+            <div>
+                <label for="address">주소</label>
+                <select name="address" id="address">
+                    <optgroup label="선산읍">
+                        <option value="">완전리</option>
+                        <option value="">동부리</option>
+                        <option value="">노상리</option>
+                    </optgroup>
+                    <optgroup label="고아읍">
+                        <option value="">관심리</option>
+                        <option value="">이례리</option>
+                        <option value="">오로리</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div><label for="email">메일주소</label><input type="email" id="email" autocomplete="off"></div>
+
+            <div><label for="tel">전화번호</label><input type="tel" id="tel" autocomplete="off"></div>
+
+            <fieldset>
+                <legend>관심분야</legend>
+                <div>
+                    <input type="checkbox" name="interest" id="kitchen"><label for="kitchen">주방제품</label>
+                    <input type="checkbox" name="interest" id="appliance"><label for="appliance">가전제품</label>
+                    <input type="checkbox" name="interest" id="fashion"><label for="fashion">패션</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" id="infant"><label for="infant">유아제품</label>
+                    <input type="checkbox" name="interest" id="sports"><label for="sports">스포츠용품</label>
+                    <input type="checkbox" name="interest" id="book"><label for="book">도서</label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <input type="submit" value="회원가입" id="signup">
+        <input type="reset" value="입력취소">
+    </form>
+</body>
+</html>

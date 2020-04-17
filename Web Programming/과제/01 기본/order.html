@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>압타밀 프로누트라 어드밴스 분유</h1>
+    <hr>
+    <label for="">96,000원 (100g당 3,000원)</label>
+    <hr>
+    <p>
+        <ul>
+            <li>주문하기</li>
+            <li>상품상세</li>
+            <li>상품평</li>
+            <li>상품문의</li>
+            <li><a href="#others">배송/교환/반품</a></li>
+        </ul>
+    
+        <div>
+            <label>남은수량 (100개 중 30개)</label>
+            <progress value="30" max="100" id="remain"></progress>
+        </div>
+        <hr>
+    </p>
+    <p>
+        <h3>주문하기</h3>
+        <div><label for="quantity">수량(최대 10개)</label><input type="number" min="1" max="10" value="1" id="quantity" required></div>
+        <div><label for="step">단계</label><input type="range" min="1" max="4" value="1" id="step"></div>
+        <div><label for="deliveryDate">원하는 배송날짜</label><input type="date" id="deliveryDate" value="연도-월-일"></div>
+        <hr>
+    </p>
+    <p>
+        <h3>상품상세</h3>
+        <table border="1">
+            <style>
+                th {
+                    text-align: left;
+                    background-color: cadetblue;
+                }
+            </style>
+            <caption style="caption-side: bottom; text-align: left;">제품비교</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">프로누트라</th>
+                    <th colspan="4">이전버전</th>
+                    <th colspan="4">어드밴스</th>
+                </tr>
+                <tr>
+                        <th>pre</th>
+                        <th>1단계</th>
+                        <th>2단계</th>
+                        <th>3단계</th>
+                        <th>Pre</th>
+                        <th>1단계</th>
+                        <th>2단계</th>
+                        <th>3단계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>전분</td>
+                        <td>X</td>
+                        <td colspan="3">O</td>
+                    <td colspan="4">X</td>
+                </tr>
+                <tr>
+                    <td>새로운공정</td>
+                    <td colspan="4">X</td>
+                    <td colspan="4">O</td>
+                </tr>
+                <tr>
+                    <td colspan="9">X=포함안됨 / O=포함됨</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <hr>
+    </p>
+    <p>
+        <h3>상품평</h3>
+        <blockquote>
+        "아기가 젓병자체를 <font color="red">완전거부</font>하네요ㅠ<br>3개부분반품할경우 방법과 비용부탁드립니다."
+        </blockquote>
+        <hr>
+    </p>
+    <p>
+        <h3>상품문의</h3>
+        <hr>
+    </p>
+    <p>
+        <h3 id="others">배송/교환/반품</h3>
+
+        <ol type="A">
+            <li>고객실수</li>
+            <li>세관에 걸려있을 경우</li>
+            <li>진료 확인서 및 소견서 등을 증빙하면 환불가능</li>
+        </ol>
+    </p>
+
+</body>
+
+</html>

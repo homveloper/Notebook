@@ -242,3 +242,11 @@ URL의 최대길이는 2048이므로 긴 데이터에 대해서는 사용할 수
 
 ---
 
+## radio
+
+<select id="sexual">
+<input type="radio" name="chk_info" value="HTML">HTML
+<input type="radio" name="chk_info" value="CSS">CSS
+<input type="radio" name="chk_info" value="웹디자인">웹디자인
+</select>
+
