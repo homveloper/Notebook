@@ -260,3 +260,27 @@ body { background-image: url('images/bg1.png'); }
 - repeat-x : 브라우저 창 너비와 같아질 때 까지 배경 이미지를 가로로 반복합니다.
 - repeat-y : 브라우저 창 높이와 같아질 때 까지 배경 이미지를 세로로 반복합니다.
 - no-repeat : 배경 이미지를 한번만 표시하고 반복하지 않습니다.
+
+## 2.5 background-size 속성
+
+배경 이미지 크기 조절
+
+```CSS
+/* 원래 배경 이미지 크기 만큼 표시 */
+.bg1{ background-size:auto;}
+
+/* 크기 만큼 표시 */
+.bg2 { background-size:200px 150px;}
+
+/* 비율 만큼 표시 */
+.bg3 { background-size:60% 40%; }
+
+/*요소 안에 들어오도록 축소/확대*/
+.bg4 { background-size:contain; }
+
+/*배경 이미지로 요소를 모두 덮도록 확대/축소*/
+.bg5 { background-size:cover; }
+
+/* 원본 이미지 크기 만큼 표시 */
+.bg6{ background-size:100% 100%; }
+```
