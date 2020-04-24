@@ -55,7 +55,7 @@ a, a:link, a:visited {
 
 /* header menu */
 
-a, li{
+a, li, .contents-area, #top-menu, .navbar-nav{
 	max-width: 1100px;
 }
 
@@ -190,7 +190,11 @@ a, li{
         padding: 0.5rem;
         border : 1px solid white
      }
-     
+	 
+	 #header #top-menu .navbar-nav .selected>a, #header #top-menu .navbar-nav li:hover>a{
+		 color:#fdff6c
+	 }
+	 
      #header #top-menu .navbar-nav li:hover ul{
         display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
      }

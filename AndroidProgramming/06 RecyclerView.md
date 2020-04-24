@@ -138,3 +138,15 @@ recyclerView를 사용하기 위한 단계는 다음과 같습니다.
             mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
     ```
+
+# 3. Expand RecyclerView
+
+다양한 형태와 요소들을 추가한 RecyclerView의 사용방법을 소개합니다.
+
+앞서 1~3번 과정은 동일합니다.
+
+4. MainActivity사용할 데이터를 정의합니다
+
+```C
+
+```
