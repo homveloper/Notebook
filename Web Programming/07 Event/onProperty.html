@@ -1,0 +1,30 @@
+<!--
+    onProperty : 간단하고 빠른 개발을 위해 사용한다.
+    모든 요소에는 event handler property가 있으며 onclick처럼
+    일반적으로 소문자이다.active
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+    <div id="div">hello world</div>
+
+     <script>
+         var element = document.getElementById("div");
+         element.onclick = function() {alert("clicked!!");}
+     </script>
+
+    <script>
+        var element = document.getElementById("div");
+        element.onclick = function() {alert(this.id);}
+    
+        // event handler 제거
+        // element.onclick = null
+    </script>
+ </body>
+ </html>
