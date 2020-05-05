@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <style>
+        body {
+            margin : 0;
+            font-size: 2em;
+        }
+
+        h1, p {
+            margin : 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin : 0 auto;
+            background : pink;
+        }
+
+        .container::after{
+            content: '내가 가상 요소랑깨';
+            display: block;
+            clear: both;
+        }
+
+        .item {
+            padding: 5%;
+            float: left;
+        }
+
+        .item-a {
+            background-color: orange;
+            width: 30%;
+        }
+
+        .item-b {
+            background-color: yellowgreen;
+            width: 50%;
+        }
+
+        footer {
+            clear : both;
+            background: gray;
+        }
+
+        @media screen and (min-width : 700px){
+            .container{
+                font-size: 0;
+            }
+
+            .item {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 1rem;
+            }
+
+            .item-a {
+                width: 30%;
+            }
+        
+            .item-b {
+                width: 50%;
+            }
+        }
+
+    </style>
+    
+     <div class="container">
+         <section class="item item-a">
+             <h1>Section a</h1>
+             <p>
+                hello world. hello world.hello world.
+                hello world.hello world.hello world.
+                hello world.hello world.hello world.
+                hello world.hello world.hello world.
+                hello world.hello world.hello world.
+             </p>
+         </section>
+         <section class="item item-b">
+             <h1>Section b</h1>
+             <p>
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+                my name is totomo.my name is totomo.
+            </p>
+         </section>
+     </div>
+
+     <footer>
+         footer
+     </footer>
+
+     <div class="container">
+        <section class="item item-a">
+            <h1>Section a</h1>
+            <p>
+               hello world. hello world.hello world.
+               hello world.hello world.hello world.
+               hello world.hello world.hello world.
+               hello world.hello world.hello world.
+               hello world.hello world.hello world.
+            </p>
+        </section>
+        <section class="item item-b">
+            <h1>Section b</h1>
+            <p>
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+               my name is totomo.my name is totomo.
+           </p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bubbling : 하위 요소의 이벤트가 상위 요소로 전파되는 것 -->
+
+    <!-- Bubbling -->
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                three
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function (div) {
+            div.addEventListener('click', logEvent);
+        });
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+</body>
+</html>

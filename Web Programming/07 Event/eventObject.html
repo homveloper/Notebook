@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div">hello world</div>
+
+    <!-- 모든 event 발생시 event 객체가 생성된다. -->
+    <script>
+        var element = document.getElementById("div");
+        element.onclick = function (event) { alert(event.type); }
+    </script>
+
+    <script>
+        var element = document.getElementById("div");
+        element.addEventListener("click", function (event) {
+            alert(event.type);
+        }, false);
+    </script>
+
+    <!-- 자주 쓰이는 property와 메서드 -->
+    <script>
+        // 발생된 이벤트와 가장 밀접한 요소
+        document.write(event.type)
+
+        // 발생한 이벤트 타입
+        document.write(event.target)
+
+        // Capturing -> Target -> Bubbling
+        document.write(event.eventPhase)
+
+        // 기본적으로 등록되어 있는 handler를 중지한다
+        // 예) a태그에 href를 등록하면 새 웹페이지로 이동
+        event.preventDefault()
+
+        // Capturing과 Bubbling이 더이상 전파되지 않도록 막음
+        event.stopPropagation()
+    </script>
+
+    <!-- 
+        Capturing : 하위 요소의 이벤트를 실행하면 최상위 요소의 이벤트 부터 시작해서
+                    하위 요소로 전파되는것
+        Bubbling : 하위 요소의 이벤트가 상위 요소로 전파되는 것
+    -->
+
+    <!-- Bubbling -->
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                three
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function (div) {
+            div.addEventListener('click', logEvent);
+        });
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+
+    <!-- Capturing -->
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                three
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function (div) {
+            div.addEventListener('click', logEvent, {
+                capture: true // default 값은 false입니다.
+            });
+        });
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+
+</body>
+
+</html>

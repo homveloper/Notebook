@@ -1,0 +1,39 @@
+<!-- 
+    
+    addEventListener
+
+    이벤트의 흐름을 조절할 수 있다. 동일한 이벤트에 여러 개의 핸들러를 등록
+    할 수 있다. 표준적인 사용법으로 받아들여지고 있다.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">hello world</div>
+
+    <script>
+        var element = document.getElementById("div");
+    
+        // click : property의 이름, on을 붙이지 않는다.
+        element.addEventListener("click", function () {
+        alert("clicked!"); }, false);
+    </script>
+    
+    
+     <!-- multi binding -->
+    <script>
+        var element = document.getElementById("div");
+        element.addEventListener("click", function () {
+        alert(this.id); }, false);
+        element.addEventListener("click", function () {
+        alert("hello world!"); }, false);
+    </script>
+</body>
+</html>
+
