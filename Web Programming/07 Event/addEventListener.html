@@ -34,6 +34,28 @@
         element.addEventListener("click", function () {
         alert("hello world!"); }, false);
     </script>
+
+    <!-- addEventListener Option 
+    
+        target.addEventListenr(type,listener, options);
+    -->
+
+    <script>
+        var element = document.getElementById("div");
+        element.addEventListener("click", function(){
+            // write code
+            alert("hello world");
+        },{
+            capture : false,
+            once : true,
+            passive : false
+
+            // passive : true 면 이벤트를 받는 composite 쓰레드가
+            // main 쓰레드의 처리를 기다리지 않고 화면 그리기를
+            // 수행 즉 이벤트가 발생할 경우 빠르게 화면에
+            // 표시( 대표적인 예 스크롤 )
+        });
+    </script>
 </body>
 </html>
 

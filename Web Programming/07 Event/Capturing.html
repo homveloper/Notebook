@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Capturing : 하위 요소의 이벤트를 실행하면 최상위 요소의 이벤트 부터 시작해서
+    하위 요소로 전파되는것 -->
+
+    <!-- Capturing -->
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                three
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function (div) {
+            div.addEventListener('click', logEvent, {
+                capture: true // default 값은 false입니다.
+            });
+        });
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+</body>
+
+</html>
