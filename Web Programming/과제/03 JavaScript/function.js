@@ -32,9 +32,10 @@ function showSlides(n) {
 }
 
 var itemsIndex = [];
+var itemsList = [];
+var itemsPrice = [39800,49800,59800,69800,89800,99800,59800,29800,10800,24800,49800,12800,15800];
 
 function itemSelect(){
-    var itemsPrice = [39800,49800,59800,69800,89800,99800,59800,29800,10800,24800,49800,12800,15800];
 
     var itemSelect = document.getElementById("itemList");
 
@@ -85,7 +86,7 @@ function itemSelect(){
         var price_won = document.createElement("span");
         price_won.appendChild(document.createTextNode("원"));
     
-        cell.appendChild(name);
+        cell.appendChild(name); 
         cell.appendChild(input);
         cell.appendChild(plus);
         cell.appendChild(minus);
@@ -94,15 +95,36 @@ function itemSelect(){
         cell.appendChild(price);
         cell.appendChild(price_won);
         li.appendChild(cell);
+
+        itemsList.push(li);
     
         order_area.appendChild(li);
         itemSelect.options[0].selected = true;
+        
+        plus.addEventListener('click', function(){
+            input.value = Number(input.value) + 1
+        })
 
+        minus.addEventListener('click', function(){
+            if(Number(input.value) > 1)
+                input.value = Number(input.value) - 1
+        })
+
+        del.addEventListener('click', function(){
+            li.parentNode.removeChild(li)
+
+            itemsList.remove
+        })
 
         var acc = document.getElementsByClassName("accordion")[2];
         var panel = acc.nextElementSibling;
         panel.style.maxHeight = panel.scrollHeight + "px";
     }
+}
+
+function setTotalPrice(){
+    var price = document.getElementsByClassName("price")
+    price.appendChild()
 }
 
 function plus(){

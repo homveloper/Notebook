@@ -1,6 +1,9 @@
 06 DOM
 ===
-
+- [06 DOM](#06-dom)
+- [1. DOM](#1-dom)
+- [2. 대상 선택하기](#2-%eb%8c%80%ec%83%81-%ec%84%a0%ed%83%9d%ed%95%98%ea%b8%b0)
+- [3. Document 객체](#3-document-%ea%b0%9d%ec%b2%b4)
 
 # 1. DOM
 

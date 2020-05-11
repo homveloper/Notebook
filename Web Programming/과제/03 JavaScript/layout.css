@@ -4,11 +4,20 @@ ul,ol,li {
     list-style:none;
 }
 
+.container {
+  margin: 200px;
+}
+
+
+
 /* sidenav */
 
 body {
     font-family: "Lato", sans-serif;
   }
+  
+.sidenav-button{
+}
 
 .sidenav {
   height: 100%;
@@ -58,9 +67,13 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
+.slideshow{
+  float: left;
+}
+
 /* Slideshow container */
 .slideshow-container {
-  max-width: 250px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -184,3 +197,4 @@ img {vertical-align: middle;}
 .total-price {
     text-align: right;
 }
+

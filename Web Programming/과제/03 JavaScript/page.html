@@ -20,125 +20,133 @@
         <a href="#">Contact</a>
     </div>
 
+
+
     <!-- side bar button -->
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
-    <!-- carousel -->
-    <div class="slideshow-container">
+    <span class="sidenav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
 
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="image/1.jpg" style="width:100%">
+    <div class="container">
+        <!-- carousel -->
+        <div class="slideshow">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="image/1.jpg" style="width:100%">
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="image/2.jpg" style="width:100%">
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="image/3.jpg" style="width:100%">
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+            <br>
+    
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+    
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+            </script>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="image/2.jpg" style="width:100%">
-        </div>
+        <form class="item-info" action="#" method="">
+            <fieldset>
+                <legend> 상세정보 </legend>
+                <div>알프랑 그늘막 팝업 스피드 원터치 세트</div>
+                </filedset>
 
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="image/3.jpg" style="width:100%">
-        </div>
+                <button class="accordion">판매자 정보</button>
+                <div class="panel">
+                    <p>
+                        <li>금오공과대학교</li>
+                        <li>소프트웨어공학과</li>
+                        <li>최범휘</li>
+                    </p>
+                </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <button class="accordion">상품 정보</button>
+                <div class="panel">
+                    <p>
+                        <li>최신 텐트</li>
+                        <li>원터치</li>
+                        <li>방수</li>
+                    </p>
+                </div>
 
+                <button class="accordion">주문 정보</button>
+                <div class="panel">
+                    <p>
+                        <select id="itemList" onchange="itemSelect()">
+                            <option value="-1" selected>선택</option>
+                            <option value="A" title="A.스피드 원터치 팝업텐트(3~4인용)">A.스피드 원터치 팝업텐트(3~4인용)&nbsp;</option>
+                            <option value="B" title="B.5초 원터치 텐트(3인용)">B.5초 원터치 텐트(3인용)&nbsp;(+10,000원)</option>
+                            <option value="C" title="C.5초 원터치 텐트(5인용)">C.5초 원터치 텐트(5인용)&nbsp;(+20,000원)</option>
+                            <option value="D" title="D.5초 원터치 텐트(7인용)">D.5초 원터치 텐트(7인용)&nbsp;(+30,000원)</option>
+                            <option value="E" title="E.원터치4면그늘막&amp;캠핑텐트(3인용)">
+                                E.원터치4면그늘막&amp;캠핑텐트(3인용)&nbsp;(+50,000원)</option>
+                            <option value="F" title="F.원터치4면그늘막&amp;캠핑텐트(6인용)">
+                                F.원터치4면그늘막&amp;캠핑텐트(6인용)&nbsp;(+60,000원)</option>
+                            <option value="G" title="G.접이식 레저체어2개세트(브라운)">G.접이식 레저체어2개세트(브라운)&nbsp;(+20,000원)
+                            </option>
+                            <option value="H" title="H.접이식 캠핑테이블">H.접이식 캠핑테이블&nbsp;(-10,000원)</option>
+                            <option value="I" title="I.2단접이식캠핑매트(140X200)">I.2단접이식캠핑매트(140X200)&nbsp;(-29,000원)
+                            </option>
+                            <option value="J" title="J.3단접이식투톤캠핑매트(200X240)">
+                                J.3단접이식투톤캠핑매트(200X240)&nbsp;(-15,000원)</option>
+                            <option value="K" title="K.3단접이식 플라워캠핑매트(200X240)">K.3단접이식
+                                플라워캠핑매트(200X240)&nbsp;(+10,000원)</option>
+                            <option value="L" title="L.다용도방수시트 3인용(1.9MＸ1.9M)">L.다용도방수시트
+                                3인용(1.9MＸ1.9M)&nbsp;(-27,000원)</option>
+                            <option value="M" title="M.다용도방수시트 6인용(2.5MＸ2.5M)">M.다용도방수시트
+                                6인용(2.5MＸ2.5M)&nbsp;(-24,000원)</option>
+                        </select>
+                    </p>
+
+                    <p id="order_area">
+
+                    </p>
+                </div>
+
+                <div class="total-price"><span>총 상품금액</span><span class="price">0</span><span>원</span></div>
+
+                <button>구매하기</button>
+        </form>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+
+                });
+            }
+        </script>
     </div>
-    <br>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-    </script>
-
-    <form action="#" method="">
-        <fieldset>
-            <legend> 상세정보 </legend>
-            <div>알프랑 그늘막 팝업 스피드 원터치 세트</div>
-            </filedset>
-
-            <button class="accordion">판매자 정보</button>
-            <div class="panel">
-                <p>
-                    <li>금오공과대학교</li>
-                    <li>소프트웨어공학과</li>
-                    <li>최범휘</li>
-                </p>
-            </div>
-
-            <button class="accordion">상품 정보</button>
-            <div class="panel">
-                <p>
-                    <li>최신 텐트</li>
-                    <li>원터치</li>
-                    <li>방수</li>
-                </p>
-            </div>
-
-            <button class="accordion">주문 정보</button>
-            <div class="panel">
-                <p>
-                    <select id="itemList" onchange="itemSelect()">
-                        <option value="-1" selected>선택</option>
-                        <option value="A" title="A.스피드 원터치 팝업텐트(3~4인용)">A.스피드 원터치 팝업텐트(3~4인용)&nbsp;</option>
-                        <option value="B" title="B.5초 원터치 텐트(3인용)">B.5초 원터치 텐트(3인용)&nbsp;(+10,000원)</option>
-                        <option value="C" title="C.5초 원터치 텐트(5인용)">C.5초 원터치 텐트(5인용)&nbsp;(+20,000원)</option>
-                        <option value="D" title="D.5초 원터치 텐트(7인용)">D.5초 원터치 텐트(7인용)&nbsp;(+30,000원)</option>
-                        <option value="E" title="E.원터치4면그늘막&amp;캠핑텐트(3인용)">
-                            E.원터치4면그늘막&amp;캠핑텐트(3인용)&nbsp;(+50,000원)</option>
-                        <option value="F" title="F.원터치4면그늘막&amp;캠핑텐트(6인용)">
-                            F.원터치4면그늘막&amp;캠핑텐트(6인용)&nbsp;(+60,000원)</option>
-                        <option value="G" title="G.접이식 레저체어2개세트(브라운)">G.접이식 레저체어2개세트(브라운)&nbsp;(+20,000원)
-                        </option>
-                        <option value="H" title="H.접이식 캠핑테이블">H.접이식 캠핑테이블&nbsp;(-10,000원)</option>
-                        <option value="I" title="I.2단접이식캠핑매트(140X200)">I.2단접이식캠핑매트(140X200)&nbsp;(-29,000원)
-                        </option>
-                        <option value="J" title="J.3단접이식투톤캠핑매트(200X240)">
-                            J.3단접이식투톤캠핑매트(200X240)&nbsp;(-15,000원)</option>
-                        <option value="K" title="K.3단접이식 플라워캠핑매트(200X240)">K.3단접이식
-                            플라워캠핑매트(200X240)&nbsp;(+10,000원)</option>
-                        <option value="L" title="L.다용도방수시트 3인용(1.9MＸ1.9M)">L.다용도방수시트
-                            3인용(1.9MＸ1.9M)&nbsp;(-27,000원)</option>
-                        <option value="M" title="M.다용도방수시트 6인용(2.5MＸ2.5M)">M.다용도방수시트
-                            6인용(2.5MＸ2.5M)&nbsp;(-24,000원)</option>
-                    </select>
-                </p>
-
-                <p id="order_area">
-                    
-                </p>
-            </div>
-
-            <div class="total-price"><span>총 상품금액</span><span>0</span><span>원</span></div>
-
-            <button>구매하기</button>
-    </form>
-
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-
-            });
-        }
-    </script>
 
 </body>
 
