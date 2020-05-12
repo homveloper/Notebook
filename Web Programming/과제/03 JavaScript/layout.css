@@ -194,3 +194,6 @@ img {vertical-align: middle;}
     text-align: right;
 }
 
+fieldset {
+  background-color: lightblue;
+}

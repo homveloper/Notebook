@@ -97,11 +97,10 @@ function itemSelect() {
         li.appendChild(cell);
 
         order_area.appendChild(li);
-        itemSelect.options[0].selected = true;
 
         plus.addEventListener('click', function (event) {
             input.value = Number(input.value) + 1
-            event.preventDefault()
+            stopDefAction(event)
             setTotalPrice()
         })
 
@@ -109,15 +108,15 @@ function itemSelect() {
             if (Number(input.value) > 1)
                 input.value = Number(input.value) - 1
             
-            event.preventDefault()
+            stopDefAction(event)
             setTotalPrice()
         })
 
         del.addEventListener('click', function (event) {
             itemsIndex[li.value] = undefined
             li.parentNode.removeChild(li)
-
-            event.preventDefault()
+            itemSelect.options[0].selected = true;
+            stopDefAction(event)
             setTotalPrice()
         })
 
@@ -142,10 +141,12 @@ function setTotalPrice() {
 
 // settings
 
-function stopDefAction(evt) {
-    evt.preventDefault();
+function stopDefAction(event) {
+    event.preventDefault();
+    event.stopPropagation();
 }
 
 function purchase(event){
-    event.preventDefault()
+    stopDefAction(event)
+    window.location.reload(true)
 }

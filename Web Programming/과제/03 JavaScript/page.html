@@ -20,8 +20,6 @@
         <a href="#">캠핑용품</a>
     </div>
 
-
-
     <!-- side bar button -->
     <span class="sidenav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
@@ -64,13 +62,12 @@
             </script>
         </div>
 
-        <form class="item-info" action="purchase.php" method="">
+        <form class="item-info" action="purchase.php" method="POST">
             <fieldset>
                 <legend> 상세정보 </legend>
                 <div>알프랑 그늘막 팝업 스피드 원터치 세트</div>
-                </filedset>
-
-            <button class="accordion" onclick="stopDefAction(event)">판매자 정보</button>
+            
+                <button class="accordion" onclick="stopDefAction(event)">판매자 정보</button>
                 <div class="panel">
                     <p>
                         <li>금오공과대학교</li>
@@ -123,7 +120,8 @@
 
                 <div class="total-price"><span>총 상품금액   </span><span id="price">0</span><span>원</span></div>
 
-                <button tpye="submit" onclick="purchase(event)">구매하기</button>
+                <button tpye="reset" onclick="purchase(event)">구매하기</button>
+            </filedset>
         </form>
 
         <script>
@@ -136,10 +134,15 @@
                     var panel = this.nextElementSibling;
                     if (panel.style.maxHeight) {
                         panel.style.maxHeight = null;
+
                     } else {
                         panel.style.maxHeight = panel.scrollHeight + "px";
+                        for(var j=0; j<acc.length; j++){
+                            if(this !== acc[j]){
+                                acc[j].nextElementSibling.style.maxHeight = null;
+                            }
+                        }
                     }
-
                 });
             }
         </script>
