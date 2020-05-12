@@ -48,7 +48,7 @@ function itemSelect() {
 
         itemsIndex[selectedItemIndex] = selectedItemIndex;
 
-        var order_area = document.getElementById("order_area");
+        var order_area = document.getElementById("order-area");
 
         var li = document.createElement("li");
         li.value = String(selectedItemIndex)
@@ -78,7 +78,7 @@ function itemSelect() {
         del.appendChild(document.createTextNode("x"));
 
         var price_span = document.createElement("span");
-        price_span.className = "price_span";
+        price_span.className = "price-span";
 
         var price = document.createElement("label");
         price.appendChild(document.createTextNode(itemsPrice[selectedItemIndex - 1]))

@@ -197,3 +197,18 @@ img {vertical-align: middle;}
 fieldset {
   background-color: lightblue;
 }
+
+.item>div{
+  display: inline-block;
+  border : 1px solid gray;
+}
+
+.item{
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.price-span{
+  display:inline-block; 
+  width: 50px;
+}
