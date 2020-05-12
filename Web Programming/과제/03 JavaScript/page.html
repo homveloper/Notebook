@@ -14,10 +14,10 @@
     <!-- side bar nav -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">음식</a>
+        <a href="#">가전</a>
+        <a href="#">가구</a>
+        <a href="#">캠핑용품</a>
     </div>
 
 
@@ -64,13 +64,13 @@
             </script>
         </div>
 
-        <form class="item-info" action="#" method="">
+        <form class="item-info" action="purchase.php" method="">
             <fieldset>
                 <legend> 상세정보 </legend>
                 <div>알프랑 그늘막 팝업 스피드 원터치 세트</div>
                 </filedset>
 
-                <button class="accordion">판매자 정보</button>
+            <button class="accordion" onclick="stopDefAction(event)">판매자 정보</button>
                 <div class="panel">
                     <p>
                         <li>금오공과대학교</li>
@@ -79,7 +79,7 @@
                     </p>
                 </div>
 
-                <button class="accordion">상품 정보</button>
+                <button class="accordion" onclick="stopDefAction(event)">상품 정보</button>
                 <div class="panel">
                     <p>
                         <li>최신 텐트</li>
@@ -88,7 +88,7 @@
                     </p>
                 </div>
 
-                <button class="accordion">주문 정보</button>
+                <button class="accordion" onclick="stopDefAction(event)">주문 정보</button>
                 <div class="panel">
                     <p>
                         <select id="itemList" onchange="itemSelect()">
@@ -121,9 +121,9 @@
                     </p>
                 </div>
 
-                <div class="total-price"><span>총 상품금액</span><span id="price">0</span><span>원</span></div>
+                <div class="total-price"><span>총 상품금액   </span><span id="price">0</span><span>원</span></div>
 
-                <button>구매하기</button>
+                <button tpye="submit" onclick="purchase(event)">구매하기</button>
         </form>
 
         <script>
