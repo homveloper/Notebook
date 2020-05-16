@@ -9,15 +9,11 @@ ul,ol,li {
 }
 
 
-
 /* sidenav */
 
 body {
     font-family: "Lato", sans-serif;
   }
-  
-.sidenav-button{
-}
 
 .sidenav {
   height: 100%;
@@ -198,3 +194,21 @@ img {vertical-align: middle;}
     text-align: right;
 }
 
+fieldset {
+  background-color: lightblue;
+}
+
+.item>div{
+  display: inline-block;
+  border : 1px solid gray;
+}
+
+.item{
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.price-span{
+  display:inline-block; 
+  width: 50px;
+}
