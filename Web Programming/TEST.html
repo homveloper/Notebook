@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         var li = [];
         li[2] = 2;
         li[1] = 1;
@@ -15,14 +15,22 @@
         document.writeln(li.length)
 
         document.writeln(typeof(li[1]))
-    </script>
+    </script> -->
 
-    <li id="test" value="1">d</li>
+    <select name="" id="list">
+        <option value=""></option>
+        <option value="a"></option>
+        <option value="b"></option>
+        <option value="c"></option>
+    </select>
 
     <script>
-        var li = document.getElementById("test")
-        document.writeln(li.value)
-        document.writeln(typeof(li.value))
+        var x = document.getElementById("list");
+
+        x.addEventListener("change",function(){
+            var chs = x.options[x.selectedIndex];
+            console.log(chs)
+        })
     </script>
 </body>
 </html>

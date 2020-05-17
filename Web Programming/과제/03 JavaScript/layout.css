@@ -194,6 +194,10 @@ img {vertical-align: middle;}
     text-align: right;
 }
 
+/* .item-info{
+  max-width: 700px;
+} */
+
 fieldset {
   background-color: lightblue;
 }
