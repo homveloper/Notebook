@@ -50,6 +50,8 @@
 
 <img width="150" src="http://www.gstatic.com/webp/gallery/4.jpg" alt="Prunus" title="A Wild Cherry (Prunus avium) in flower">
 
+<img width="50%" src="">
+
 ![Prunus](http://www.gstatic.com/webp/gallery/4.jpg)
 
 # 코드 인용
