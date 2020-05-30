@@ -1,36 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
 </head>
 <body>
-    <!-- <script>
-        var li = [];
-        li[2] = 2;
-        li[1] = 1;
-        li[2] = 0
+    <label for="name">아이디</label>
+    <input id="name" type="text" readonly>
 
-        document.writeln(li.length)
-
-        document.writeln(typeof(li[1]))
-    </script> -->
-
-    <select name="" id="list">
-        <option value=""></option>
-        <option value="a"></option>
-        <option value="b"></option>
-        <option value="c"></option>
-    </select>
-
-    <script>
-        var x = document.getElementById("list");
-
-        x.addEventListener("change",function(){
-            var chs = x.options[x.selectedIndex];
-            console.log(chs)
-        })
-    </script>
+    <label for="name">비밀번호</label>
+    <input id="name" type="password">
 </body>
 </html>
