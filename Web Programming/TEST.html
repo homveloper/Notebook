@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    <label for="name">아이디</label>
-    <input id="name" type="text" readonly>
+<h2> 축제하면 가장 먼저 생각나는 것 h2>
+<ol>
+    <li class="festival"></li>
+    <li class="festival"></li>
+    <li class="festival"></li>
+    <li class="festival"></li>
+</ol>
 
-    <label for="name">비밀번호</label>
-    <input id="name" type="password">
-</body>
-</html>
+<script>
+    var li = document.createElement('li');
+    var content = document.createTextNode('휴강');
+
+    li.appendChild(content);
+    // insertBefore(추가할 요소, 기준 요소)
+    root.insertBefore(li, root.firstElementChild.nextElementSibling);
+</script>

@@ -22,7 +22,7 @@ document.writeln(a+"<br>");
 document.writeln(b+"<br>")
 
 if ( a==b)
-    document.writeln("hello world");
+    document.writeln("hello world<br>");
 
 
 // == : 값이 일치
@@ -149,6 +149,7 @@ document.write(name+"<br>");
 
 
 
+// 객체 선언 및 초기화의 방법
 var human = {
     "name" : "철수", 
     "age" : 10, 
@@ -171,6 +172,7 @@ human["name"] = "철수";
 human["age"] = 10;
 human["gender"] = "남";
 
+// 객체 멤버 접근
 document.write(human.name + "의 나이는 "+human["age"]+"살 입니다.<br>");
 
 document.write("철수의 정보<br>")
@@ -178,14 +180,196 @@ for(key in human){
     document.write(key + " value : "+human[key]+"<br>");
 }
 
+// 객체 멤버 제거
+delete human.gender
+
+document.write("철수의 정보<br>")
+for(key in human){
+    document.write(key + " value : "+human[key]+"<br>");
+}
+
+// 유용한 유틸
+document.write("human의 멤버 변수의 갯수 : " + Object.keys(human).length + "<br>");
+
+
+// Object 객체
+// 자바 스크립트의 최상위 객체로 모든 하위 js 객체는 다음과 같은 메서드를 가짐
+
+document.write(human.constructor() + "<br>");
+document.write(human.hasOwnProperty('age') + "<br>");
+document.write(human.propertyIsEnumerable('age') + "<br>");
+document.write(human.age.toString() + "<br>");
+
+var text = new String("hello world")
+document.write(text + "<br>");
+
+var is = new Boolean(false)
+
+
+
+//Number 객체
+var num = new Number(123);
+var num = new Number('123');
+var num2 = 234;
+
+document.write("num : " + num + "<br>");
+document.write("num2 : " + num2 + "<br>");
+
+if(num instanceof Number)
+    document.write("num is Number ?" + "<br>");
+
+if(num2 instanceof Number)
+document.write("num2 is Number ?" + "<br>");
+
+/*
+    num2는 Number 객체가 아니지만, Number객체에서 
+    제공하는 property와 method를 사용할 수 있다.
+*/
+
+/*
+    Auto Boxing
+
+    new 키워드를 사용하지 않아도 String, Number, Boolean은 
+    원시 타입이면서 객체 처럼 동작합니다. 앞에서 num2가 Number 객체가 아님에도 해당
+    property와 method를 사용할 수 있는 이유입니다.
+*/
+
+var name = "dog";
+var age = 7;
+
+// name은 원시 타입이지만 String의 length가 있음
+document.write("name length : " + name.length + "<br>");
+document.write("age" + age.toString() + "<br>");
+
+// Date 객체
+
+// Date(year, month+1, day)
+var date = new Date(2020,6,8);
+var date2 = new Date();     //현재 시간
+
+document.write("date : " + date + "<br>")
+document.write("date2 : " + date2 + "<br>")
+
+var day= ['일요일', '월요일', '화요일', '수요일' ,'목요일' ,'금요일' ,'토요일'];
+
+// getDay의 범위는 0~6이며 0은 일요일이다.
+document.write("오늘의 요일  : " + day[date2.getDay()] + "<br>")
+
+var birthday = new Date("1997-09-30");
+
+document.write("만 나이 : " + (new Date().getFullYear() - birthday.getFullYear()) + "<br>");
+
+
+/*
+    자바스크립트 메모리 모델
+
+    원시타입과 참조 타입 데이터의 저장 방식 이해하기
+
+    var는 function-scoped 이고, let과 const는 block-scoped 입니다.
+
+    var name = "Marcus";
+    console.log(name);
+
+    var name = "Jogeonsang";
+    console.log(name);
+
+    output: Marcus
+    output: Jogeonsang
+
+    다음과 같이 name이라는 변수를 2번 선언했는데도 에러가 나오지않고 각기 다른 값이 출력되는걸 볼 수 있다.
+    
+    var : 변수의 재 선언, 재 할당이 모두 가능하다.
+    let : 변수의 재 선언이 불가능하다.            ex. 자바의 변수
+    const : 변수의 재 선언, 재 할당이 불가능하다. ex. 자바의 final
+*/
+
+let myNumber = 23;
+let newNumber = myNumber;   //myNumber의 주소로 할당됩니다.
+
+if(myNumber === newNumber)
+    document.write("둘의 주소가 동일<br>");
+
+//하지만 myNumber는 원시타입이기 때문에, myNumber의 값이 변경되면 새로운
+//주소에 할당되며, newNumber는 이전의 myNumber주소를 그대로 가리키고 있게됩니다.
+myNumber = myNumber + 1;
+
+if(myNumber !== newNumber)
+    document.write("둘의 주소가 동일하지않음<br>");
+
+// [중요!!] array는 let으로 선언하는 것이 아닌 const로 선언해야 주소가 변경되지 않는다.
+
+const myArray = [];
+
+myArray.push(1);
+myArray.push(1);
+myArray.push(1);
+myArray.push(1);
+
+let myArray2 = [];
+
+myArray2.push(1);
+myArray2.push(1);
+myArray2.push(1);
+myArray2.push(1);
+
+
+/*
+    함수
+
+    자바스크립트에서는 함수도 객체입니다. 
+    
+    - 함수를 변수에 할당할 수 있음.
+    - 함수를 함수의 인자로 사용할 수 있음
+    - 함수를 반환값으로 사용할 수 있음
+*/
+
+// 함수를 변수에 할당
+function getTitle(){
+    return "hello world";
+}
+
+    // 1. 변수에 할당하거나
+    var f = getTitle;
+    document.write(f() + "<br>");
+
+    // 2. 멤버변수에 할당하거나
+    var message = {
+        f : getTitle
+    }
+    document.write(message.f() + "<br>");
+
+    // 3. 배열에 할당하거나
+    var fArr = [1,2,3];
+    fArr[0] = getTitle;
+    document.write(fArr[0]() + "<br>");
+
+// 함수 정의
+
+    // 1. 함수 선언식
+    function f1(a){
+        return a;
+    }
+
+    // 2. 함수 표현식
+    var f2 = function(a){
+        return a*a;
+    }
+
+    // 3. 익명 함수 : 즉시 실행이 필요한 경우
+    (function(a){
+        return a * a * a;
+    })(3);
+
 var vscope = "global";
 
 function fscopse(){
     var vscope = "local";
+    // 종속변수
     document.write(vscope+"<br>")
+
+    // 전역변수
     document.write(this.vscope+"<br>")
 }
-
 fscopse()
 
 
@@ -242,8 +426,7 @@ var numbers = [20, 10, 9,8,7,6,5,4,3,2,1];
 document.write(numbers.sort(sortNumber)); // array, [20,10,9,8,7,6,5,4,3,2,1]
 
 
-// Closer
-
+// Closure
 function factory_movie(title){
     return {
         get_title : function (){
@@ -254,33 +437,22 @@ function factory_movie(title){
         }
     }
 }
+
+document.write("<br>")
+
 ghost = factory_movie('Ghost in the shell');
 matrix = factory_movie('Matrix');
  
-alert(ghost.get_title());
-alert(matrix.get_title());
+document.write(ghost.get_title() + "<br>");
+document.write(matrix.get_title() + "<br>");
  
 ghost.set_title('공각기동대');
  
-alert(ghost.get_title());
-alert(matrix.get_title());
+document.write(ghost.get_title() + "<br>");
+document.write(matrix.get_title() + "<br>");
 
 
 
-var arr = []
-for(var i = 0; i < 5; i++){
-    arr[i] = function(id) {
-        return function(){
-            return id;
-        }
-    }(i);
-}
-for(var index in arr) {
-    console.log(arr[index]());
-}
-
-function Person(){
-
-}
-
-var p1 = new person();
+console.log(x);
+var x = 3;
+console.log(x);
