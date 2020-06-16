@@ -1,7 +1,7 @@
 10 WAS
 ===
 
-# Web Server
+# 1. Web Server
 
 웹클라이언트로 부터 HTTP 요청을 받아들이고 적절하게 응답하는 역할을 한다.
 
@@ -51,11 +51,11 @@
 - JSP(Java Server Page) 지원
 
 
-# WAS(Web Application Server)
+# 2. WAS(Web Application Server)
 
 웹서버와 Web Container를 포함한 것으로, Web Container는 Servlet, ASP, JSP, PHP 등의 웹 언어로 작성된 웹 어플리케이션을 서버단에서 실행한다. 데이터베이스 작업과 웹 서비스 제공이 주요 기능이다.
 
-# Servlet
+# 3. Servlet
 
 Servlet은 Java를 사용하여 웹페이지를 동적으로 생성하는 서버측 프로그램 혹은 그 사양을 말한다. 즉 Servlet은 웹 서버의 성능을 향상하기 위해 사용되는 Java Class의 일종이다. 
 
@@ -74,6 +74,10 @@ JSP가 HTML 문서 안에 Java 코드를 포함하고 있는 반면, Servlet은 
 - HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다. UDP보다 속도가 느리다.
 
 - HTML 변경 시 Servlet을 재컴파일해야 하는 단점이 있다.
+  
+## 생명주기
+
+![alt](../img/servlet%20생명주기.png)
 
 ## 동작 방식
 
@@ -90,3 +94,17 @@ Servlet은 Java 소스코드 안에 HTML 코드가 있는 반면, JSP는 Java �
 Servlet의 규칙이 꽤나 복잡하기 때문에 JSP가 나오게 되었습니다. JSP는 WAS에 의하여 Servlet Class로 변환하여 사용되어 집니다.
 
 <img width="" src="../img/JSP%20동작.png">
+
+## HttpServletRequest
+
+요청 유형, 쿠기, 세션 등 HTTP 요청에 대한 인터페이스를 추상화한 것으로 **HTTP 요청 관련 메소드를 포함**하고 있습니다. 요청에 대한 모든 정보를 담고 있습니다.
+
+
+request에는 사용자의 입력에 대한 정보도 포함하고 있습니다.
+
+- request.getParameter(String name) : html의 tag에 설정된 name으로 가져옵니다.
+- request.getParameterValues(String name) : name으로 설정된 모든 tag의 값을 배열로 가져옵니다.
+- request.getParameterNames() : 웹브라우저가 전송한 parameter의 이름을 조회합니다.
+- request.getParameterMap() 
+
+## HttpServletResponse
