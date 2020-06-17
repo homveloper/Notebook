@@ -1,3 +1,8 @@
+#include <avr/io.h>
+#define F_CPU 16000000L		//16Mhz
+#include <util/delay.h>
+
+
 int count = 0;			// 오버플로우가 발생한 횟수
 int state = 0;			// LED 점멸 상태
 
