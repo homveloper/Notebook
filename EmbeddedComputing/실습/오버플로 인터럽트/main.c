@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #define F_CPU 16000000L		//16Mhz
-#include <util/delay.h>
+#include <avr/interrupt.h>
 
 
 int count = 0;			// 오버플로우가 발생한 횟수
@@ -21,7 +21,7 @@ int main(void){
 	DDRB = 0x20;						//PB5핀을 출력으로 설정
 	PORTB = 0x00;						//LED는 끈 상태에서 시작
 	
-	TCCROB |= (1<< CS02) | (1<<CS00);	//분주비를 1024로 설정
+	TCCR0B |= (1<< CS02) | (1<<CS00);	//분주비를 1024로 설정
 	
 	TIMSK0 |= (1<< TOIE0);				//오버플로 인터럽트 허용
 	sei();								//전역적으로 인터럽트 허용
