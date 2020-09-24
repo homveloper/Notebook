@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "xstring": "c"
-    }
+    },
+    "python.pythonPath": "C:\\Users\\bum44\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
 }
