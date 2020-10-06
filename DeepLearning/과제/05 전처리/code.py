@@ -23,6 +23,12 @@ y_test = test_set['class'].copy()
 
 print(len(x_train),len(y_train),len(x_test),len(y_test))
 
+_,c_test = np.unique(y_test,return_counts=True)
+_,c_train = np.unique(y_train,return_counts=True)
+
+print(c_test,c_train)   # iris class별 갯수
+print(c_test/(c_train+c_test))  #iris class 균일도
+
 ## 학습데이터와 평가데이터에서 입출력분리
 
 iris = load_iris(as_frame=True)
