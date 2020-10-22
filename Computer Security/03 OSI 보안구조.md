@@ -5,8 +5,8 @@
 
 ## OSI 보안 구조의 핵심 개념
 
-- Security Attack : 
-- Security Service : 
+- Security Attack : 기관이 소유한 정보의 안전성을 침해하는 제반행위.
+- Security Service : 정보 전송과 데이터 처리 시스템의 보안을 강화하기 위한 처리 또는 통신 서비스로 보안공격에 대응하귀 위한 것이며, 하나 또는 그 이상의 보안 매커니즘을 사용하여 서비스를 제공한다.
 - Secuirt Mechanism : Security Service를 보장하기 위한 방법을 말한다.
 
 ## Security Attack
