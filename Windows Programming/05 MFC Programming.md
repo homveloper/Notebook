@@ -39,7 +39,6 @@ mfc140d.dll에서 d는 debug모드에서 사용되는 라이브러리이며, mfc
 | tools                |  Project Template   |  AppWizrd<br>ClassWizard<br>ActiveX Control Wizard   |
 | dev. model           |  -   | Document/View model    |
 
-
 # 2. MFC Hierarchy
 
 # 3. Global functions

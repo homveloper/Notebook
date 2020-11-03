@@ -42,6 +42,8 @@ $F = \lambda f(x_2) + (1 - \lambda) f(x_1)$
 일반적인 보간 방법은 다음 수식을 따릅니다. R은 보간을 위한 특정 함수이며, 임의로 정의할 수 있습니다.
 
 - $f(x^`) = R(-\lambda)f(x_1) + R(1-\lambda)f(x_2$
+
+cubic interpolation
   
 # 2. Rotation
 
